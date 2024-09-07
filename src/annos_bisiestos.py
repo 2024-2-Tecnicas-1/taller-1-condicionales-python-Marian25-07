@@ -1,6 +1,9 @@
 def evaluar(anno):
-    # TODO: Coloca aquí el código del ejercicio 2: Años bisiestos
-    return "";
+    # Un año es bisiesto si es divisible por 4, pero no por 100, excepto que sea divisible por 400
+    if (anno % 4 == 0 and anno % 100 != 0) or (anno % 400 == 0):
+        return f"{anno} es bisiesto"
+    else:
+        return f"{anno} no es bisiesto"
 
 if __name__ == '__main__':
     print("Año:", end="")
@@ -8,3 +11,4 @@ if __name__ == '__main__':
 
     respuesta = evaluar(anno)
     print(respuesta)
+
